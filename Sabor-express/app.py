@@ -14,19 +14,27 @@ def finalizando_programa():
     # os.clear("clear") em computadores mac
     print("Encerrando programa\n")
 
+def opcao_invalida():
+    print("Opção inválida.")
+    input("digite outro número para voltar ao menu principal.")
+    main()
+
 def escolhendo_opcao():
-    opção_escolhida = int(input("Escolha uma opção: "))
-    match opção_escolhida:
-        case 1:
-            print("Cadastrar restaurante")
-        case 2:
-            print("Listar restaurantes")
-        case 3:
-            print("Validar restaurantes")
-        case 4:
-            finalizando_programa()
-        case _:
-            print("Opção inválida.")
+    try:
+        opção_escolhida = int(input("Escolha uma opção: "))
+        match opção_escolhida:
+            case 1:
+                print("Cadastrar restaurante")
+            case 2:
+                print("Listar restaurantes")
+            case 3:
+                print("Validar restaurantes")
+            case 4:
+                finalizando_programa()
+            case _:
+                opcao_invalida()
+    except:
+        opcao_invalida()
     #    opcao_escolhida = int(input("Escolha uma opção: "))
     #    if opcao_escolhida == 1:
     #       print("Cadastrar restaurante")
