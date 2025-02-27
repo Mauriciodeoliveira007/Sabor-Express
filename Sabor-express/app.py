@@ -37,6 +37,7 @@ def escolhendo_opcao():
         opcao_invalida()
 
 def main():
+    os.system("cls")
     exibir_nome_do_programa()
     exibir_opçoes()
     escolhendo_opcao()
