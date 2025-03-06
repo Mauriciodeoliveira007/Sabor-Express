@@ -79,7 +79,7 @@ def cadastrar_novo_restaurante():
     '''
     inicio_da_funcao("Cadastro de novos restaurantes")
     nome_do_restaurante = str(input("Digite o nome do restaurante que deseja cadastrar: "))
-    categoria = input(f"Digite a categoria do restaurante {nome_do_restaurante}")
+    categoria = input(f"Digite a categoria do restaurante {nome_do_restaurante}: ")
     dados_do_restaurante = {"nome": nome_do_restaurante, "categoria": categoria, "ativo": False}
     restaurantes.append(dados_do_restaurante)
     print(f"O restaurante {nome_do_restaurante} foi cadastrado com sucesso!\n")
@@ -159,5 +159,4 @@ def main():
     escolhendo_opcao()
 
 if __name__ == "__main__":
-    main()
     main()
